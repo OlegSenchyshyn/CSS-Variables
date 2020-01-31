@@ -1,1 +1,84 @@
-/* styles will be added here =) */
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Raleway:500&display=swap');
+
+:root {
+  --base: #f99104;
+  --spacing: 10px;
+  --blur: 10px;
+  --rotate: 0deg;
+  --moveUpDown: 0px;
+  --moveLeftRigth: 0px;
+}
+
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  transform: rotate(var(--rotate))
+    translate(var(--moveLeftRigth), var(--moveUpDown));
+}
+
+.hl {
+  color: var(--base);
+}
+
+html {
+  background: linear-gradient(to top, #141e30, #243b55) no-repeat;
+  background-attachment: fixed;
+}
+
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+body {
+  text-align: center;
+
+  color: honeydew;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  position: relative;
+  z-index: 3;
+  text-align: end;
+  padding-bottom: 30px;
+}
+
+input {
+  width: 50%;
+}
+
+input#base {
+  width: 156px;
+  padding-left: 4px;
+  background: transparent;
+  border: none;
+}
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 160px;
+  height: 20px;
+  background: linear-gradient(to right, #ff7800 0%, #6534ac 100%);
+  background-size: 150px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 40px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to left, #ff0000 10%, #ff9900 100%);
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
